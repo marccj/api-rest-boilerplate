@@ -1,0 +1,47 @@
+{
+  "name": "api-rest-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for a simple mongo based REST API backend with token authentication.",
+  "author": "marccj",
+  "main": "src/index.js",
+  "apidoc": {
+    "title": "API REST WS Boilerplate",
+    "url": "https://api-rest-boilerplate.io"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "node build/index.js",
+    "build-api": "apidoc -i src -o apidoc",
+    "linter": "npx eslint src/**",
+    "linter-fix": "npx eslint src/** --fix"
+  },
+  "keywords": [
+    "ws",
+    "api",
+    "rest"
+  ],
+  "author": "marccj",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.3.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.16"
+  }
+}
